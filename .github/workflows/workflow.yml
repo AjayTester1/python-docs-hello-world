@@ -21,13 +21,12 @@ jobs:
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS_4f3604aa }}
-
     - uses: azure/appservice-settings@v1
       with:
         app-name: aatiwarishub-python-linux
         general-settings-json: '{"linuxFxVersion": "PYTHON|3.7"}' #'General configuration settings as Key Value pairs'
         app-settings-json: '[{ "name": "SCM_DO_BUILD_DURING_DEPLOYMENT", "value": "false" }]'
-
+    - run: echo "The webapp-url is ${{ steps.settings.outputs }}"
     # Azure logout
     - name: logout
       run: |
