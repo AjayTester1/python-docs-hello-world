@@ -26,7 +26,7 @@ jobs:
         app-name: aatiwarishub-python-linux
         general-settings-json: '{"linuxFxVersion": "PYTHON|3.7"}' #'General configuration settings as Key Value pairs'
         app-settings-json: '[{ "name": "SCM_DO_BUILD_DURING_DEPLOYMENT", "value": "false" }]'
-    - run: echo "The webapp-url is ${{ steps.settings.outputs }}"
+    - run: echo "The webapp-url is ${{ steps.settings.outputs.webapp-url  }}"
     # Azure logout
     - name: logout
       run: |
