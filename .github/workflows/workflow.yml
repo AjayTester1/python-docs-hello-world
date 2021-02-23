@@ -24,7 +24,7 @@ jobs:
     - uses: azure/appservice-settings@v1
       with:
         app-name: aatiwarishub-python-linux
-        app-settings-json: '[{ "name": "SCM_DO_BUILD_DURING_DEPLOYMENT", "value": "true" }]'
+        app-settings-json: '[{ "name": "SCM_DO_BUILD_DURING_DEPLOYMENT", "value": "false" }]'
     # Azure logout
     - name: logout
       run: |
